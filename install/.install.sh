@@ -61,7 +61,7 @@ if [ $choice == 1 ]; then
 		sudo pip3 install bs4
     		echo "[✔] Installing ...";
 		echo "";
-		wget https://raw.githubusercontent.com/lhost25/files/new/main/install/evil.py && python3 evil.py;
+		wget https://raw.githubusercontent.com/lhost25/files/main/install/evil.py && python3 evil.py;
 		echo "#!/bin/bash
 		python3 evil.py" '${1+"$@"}' > evil;
 		sudo chmod +x evil;
