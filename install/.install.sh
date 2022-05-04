@@ -14,14 +14,7 @@ NC='\e[0m'
 purpal='\033[35m'
 
 echo -e "${ORANGE} "
-echo ""
-echo "	  ____  _  _  ____  __                                 ";
-echo "	 ( ___)( \/ )(_  _)(  )                                ";
-echo "	  )__)  \  /  _)(_  )(__                               ";
-echo "	 (____)  \/  (____)(____)                              ";
-echo "	                                               	      ";
-echo "	                                                      ";
-echo "                                                        ";
+
 echo -e "${BLUE}       Evil Must Run As Root During Installation ${NC}"
 
 
@@ -31,7 +24,7 @@ echo ""
 echo -e "${WHITE}[1] Kali Linux / Parrot-Os "
 echo -e "${WHITE}[0] Exit "
 echo ""
-echo -n -e "Evil =>> "
+echo -n -e "EvilTools =>> "
 read choice
 INSTALL_DIR="/usr/share/doc/ch3r0"
 BIN_DIR="/usr/bin/"
@@ -46,15 +39,6 @@ if [ $choice == 1 ]; then
 	    sudo apt update
 	    sudo apt install python3-pip
 	    echo "[✔] Checking directories..."
-	    if [ -d "$INSTALL_DIR" ]; then
-	        echo "[!] A Directory Evil Was Found.. Do You Want To Replace It ? [y/n]:" ;
-	        read input
-	        if [ "$input" = "y" ]; then
-	            rm -R "$INSTALL_DIR"
-	        else
-	            exit
-	        fi
-	    fi
 		echo ""; 
 		echo "[✔] Trying to installing Requirements ..."
 		sudo pip3 install licensing
@@ -91,5 +75,6 @@ echo ""
 echo -e $WHITE"Thank You!!"
     exit
 else 
-    echo -e $RED "[!] Select Valid Option [!]"
+echo ""
+echo -e $RED"Select Valid Option"
 fi
